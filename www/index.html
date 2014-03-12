@@ -13,10 +13,7 @@
 function scan() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+         if (!result.cancelled){location.hash = '#' + result.text;}
       }, 
       function (error) {
           alert("Scanning failed: " + error);
@@ -54,7 +51,7 @@ function scan() {
 		<h1>Page Two</h1>
 	</div>
 	<div data-role="content">	
-		Content		
+		The qr code brought you here		
 	</div>
 	<div data-role="footer">
 		<h4>Page Footer</h4>
