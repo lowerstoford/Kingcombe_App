@@ -19,12 +19,6 @@ function scan() {
           alert("Scanning failed: " + error);
       }
    );}
-            /*
-            if (args.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-            }
-            */
-
         
 </script>
 
@@ -48,7 +42,8 @@ function scan() {
             alert('great error');
             alert(e.message);
         }
-    </script>		
+    </script>
+    		
 </head> 
 <body> 
 
@@ -72,9 +67,10 @@ function scan() {
 	<div data-role="header">
 		<h1>Page Two</h1>
 	</div>
-	<div onload="playAudio('apple.mp3')" data-role="content">	
+	<div data-role="content">	
 		The qr code brought you here
-       	
+        You should here Apple.mp3
+       	<img src="apple.png" onload="playAudio('apple.mp3')">
 	</div>
 	<div data-role="footer">
 		<h4>Page Footer</h4>
